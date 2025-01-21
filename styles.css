@@ -59,3 +59,56 @@ h1 {
 .option-button:hover {
   background-color: #1976d2;
 }
+
+/* Popup container (hidden by default) */
+.popup {
+  display: none; /*   Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Popup content */
+.popup-content {
+  display: none; /*  i added this  */
+  background-color: #ed9727;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+  color: #fbf8f5;
+  margin: 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.popup.fade-out {
+  animation: fadeOut 0.3s ease-in-out;
+}

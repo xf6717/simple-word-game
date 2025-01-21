@@ -21,6 +21,7 @@ class GameController {
   handleAnswer(selectedWord) {
     const isCorrect = this.model.checkAnswer(selectedWord);
     this.view.playSound(isCorrect);
+    //this.view.tryAgain(isCorrect); // added
     this.view.updateScore(this.model.score);
 
     if (this.model.nextGame()) {
