@@ -1,14 +1,14 @@
 // View
-class LessonView {
+class GameView {
   constructor() {
-    this.lessonImage = document.getElementById("lesson-image");
+    this.gameImage = document.getElementById("game-image");
     this.optionsContainer = document.getElementById("options-container");
     this.scoreDisplay = document.getElementById("score-display");
   }
 
-  displayLesson(lesson) {
-    this.lessonImage.src = lesson.image;
-    this.lessonImage.alt = lesson.word;
+  displayGame(game) {
+    this.gameImage.src = game.image;
+    this.gameImage.alt = game.word;
   }
 
   displayOptions(options, handleAnswer) {
@@ -23,7 +23,7 @@ class LessonView {
   }
 
   updateScore(score) {
-    this.scoreDisplay.innerHTML = "★".repeat(score);
+    this.scoreDisplay.innerHTML = "Your current score: " + score;
   }
 
   playSound(isCorrect) {

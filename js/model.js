@@ -1,46 +1,47 @@
-// Model
-class LessonModel {
+// Model - data & business logic
+
+class GameModel {
   constructor() {
-    this.lessons = [
+    this.games = [
       { word: "Cat", image: "images/cat.jpeg" },
       { word: "Dog", image: "images/dog.jpeg" },
       { word: "Ball", image: "images/ball.jpeg" },
       { word: "Apple", image: "images/apple.jpeg" },
     ];
-    this.currentLesson = 0;
+    this.currentGame = 0;
     this.score = 0;
   }
 
-  getCurrentLesson() {
-    return this.lessons[this.currentLesson];
+  getCurrentGame() {
+    return this.games[this.currentGame];
   }
 
   getOptions() {
-    const correctAnswer = this.getCurrentLesson().word;
-    const otherOptions = this.lessons
-      .filter((lesson) => lesson.word !== correctAnswer)
-      .map((lesson) => lesson.word);
+    const correctAnswer = this.getCurrentGame().word;
+    const otherOptions = this.games
+      .filter((game) => game.word !== correctAnswer)
+      .map((game) => game.word);
     return this.shuffleArray([correctAnswer, ...otherOptions.slice(0, 2)]);
   }
 
   checkAnswer(selectedWord) {
-    const isCorrect = selectedWord === this.getCurrentLesson().word;
+    const isCorrect = selectedWord === this.getCurrentGame().word;
     if (isCorrect) {
       this.score++;
     }
     return isCorrect;
   }
 
-  nextLesson() {
-    if (this.currentLesson < this.lessons.length - 1) {
-      this.currentLesson++;
+  nextGame() {
+    if (this.currentGame < this.games.length - 1) {
+      this.currentGame++;
       return true;
     }
     return false;
   }
 
   resetGame() {
-    this.currentLesson = 0;
+    this.currentGame = 0;
     this.score = 0;
   }
 
