@@ -2,7 +2,7 @@
 
 My first project using javascript!
 
-This is a simple game where you click on the correct word after seeing the picture.
+This is a simple game where you choose the word that matches the picture.
 
 Video demo here:
 
