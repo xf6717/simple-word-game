@@ -15,16 +15,16 @@
           <img id="game-image" src="/placeholder.svg" alt="game Image" />
         </div>
         <div id="options-container"></div>
-        <div>Next</div>
-
-        <!-- Popup Modal  -->
-        <div id="popup" class="popup hidden">
-          <div class="popup-content">
-            <h2>Try Again!</h2>
-          </div>
-        </div>
       </div>
     </main>
+    <!-- Modal that opens when game ends -->
+    <div class="modal" id="modal">
+      <div class="modal-contents">
+        <p id="modal-text">You scored 4!</p>
+        <button id="modal-btn">Play again</button>
+      </div>
+    </div>
+
     <script src="js/model.js"></script>
     <script src="js/view.js"></script>
     <script src="js/controller.js"></script>

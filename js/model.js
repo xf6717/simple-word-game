@@ -10,7 +10,6 @@ class GameModel {
     ];
     this.currentGame = 0;
     this.score = 0;
-    this.popup = document.getElementById("popup");
   }
 
   getCurrentGame() {
@@ -30,14 +29,6 @@ class GameModel {
     if (isCorrect) {
       this.score++;
     }
-    // TODO: add the try again logic here?
-    // this.popup.style.display = "flex"; // Show the popup
-
-    // // Automatically hide the popup after 1 second
-    // setTimeout(() => {
-    //   popup.style.display = "none"; // Hide the popup
-    // }, 1000); // 1000 ms = 1 second
-
     return isCorrect;
   }
 

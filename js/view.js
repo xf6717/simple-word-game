@@ -4,6 +4,9 @@ class GameView {
     this.gameImage = document.getElementById("game-image");
     this.optionsContainer = document.getElementById("options-container");
     this.scoreDisplay = document.getElementById("score-display");
+    this.modalText = document.getElementById("modal-text");
+    this.modal = document.getElementById("modal");
+    this.modalBtn = document.getElementById("modal-btn");
   }
 
   displayGame(game) {
@@ -34,6 +37,15 @@ class GameView {
   }
 
   showGameOver(score) {
-    alert(`Game Over! Your score: ${score}`);
+    this.modal.style.display = "flex"; // shows the modal
+    this.modalText.innerHTML = "You scored " + score + "!";
+    this.closeModal();
+  }
+
+  closeModal() {
+    this.modalBtn.addEventListener("click", () => {
+      console.log("Close button clicked!");
+      this.modal.style.display = "none";
+    });
   }
 }
