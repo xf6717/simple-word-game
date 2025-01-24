@@ -6,10 +6,12 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: #ed9727;
+  flex-direction: column;
 }
 
 main {
   text-align: center;
+  flex-grow: 1;
   width: 464px;
 }
 
@@ -93,4 +95,17 @@ h1 {
   background-color: var(--turquoise);
   color: #f2fbfb;
   border-radius: 3px;
+}
+
+footer {
+  color: white;
+  margin-bottom: 20px;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer a {
+  color: var(--yellow);
 }
